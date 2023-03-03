@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faUser,
     faCoins,
     faGear,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '../../../../assets/images';
 import AccountItem from '../../../AccountItem';
 import Menu from '../../../Popper/Menu';
+import { UploadIcon } from '../../../Icons';
+import Image from '../../../Image';
 
 const cx = classNames.bind(styles);
 
@@ -141,7 +142,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -153,10 +154,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/67508cadba202ad6da338e95d71cff4e~c5_100x100.jpeg?x-expires=1677945600&x-signature=x%2FT%2FgkOVzZWJEbEYnql7mQJBVAQ%3D"
                                 alt="Le Van Son"
+                                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
