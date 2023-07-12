@@ -1,5 +1,6 @@
+import Content from '../../layouts/components/Contents/index';
 function Home() {
-    return <h2 style={{ height: 2000 }}>Home page</h2>;
+    return <Content />;
 }
 
 export default Home;

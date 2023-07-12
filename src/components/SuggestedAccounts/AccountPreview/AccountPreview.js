@@ -12,7 +12,7 @@ function AccountPreview() {
             <div className={cx('header')}>
                 <img
                     className={cx('avatar')}
-                    src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_100x100.jpeg?x-expires=1682200800&x-signature=axpbaBITxfVE8dAzNYiUl%2FLJ2NM%3D"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYG6U21DY1VAkJsYnnVbLvB8OPNU5Q4E5Q1w&usqp=CAU"
                     alt=""
                 />
                 <Button className={cx('follow-btn')} primary>
