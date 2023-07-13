@@ -12,10 +12,13 @@ import {
 } from '../../../components/Icons';
 import config from '../../../config';
 import SuggestedAccounts from '../../../components/SuggestedAccounts/SuggestedAccounts';
+import Discover from '../Discover';
+import FooterSidebar from './FooterSidebar';
+import LoginSidebar from './LoginSidebar';
 
 const cx = classNames.bind(styles);
 
-function Sidebar() {
+function Sidebar({ classNameDiscover, classNameContent }) {
     return (
         <aside className={cx('wrapper')}>
             <Menu>
@@ -28,8 +31,14 @@ function Sidebar() {
                 />
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
             </Menu>
+
+            <LoginSidebar />
+
             <SuggestedAccounts label="Suggested accounts" />
             <SuggestedAccounts label="Following accounts" />
+
+            <Discover className={classNameDiscover} classNameContent={classNameContent} />
+            <FooterSidebar />
         </aside>
     );
 }
